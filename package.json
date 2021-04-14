@@ -4,7 +4,7 @@
   "description": "website",
   "main": "index.js",
   "scripts": {
-    "copy": "cp src/index.html public && mkdir -p public/admin && cp src/admin/* public/admin",
+    "copy": "mkdir -p public && cp src/index.html public && mkdir -p public/admin && cp src/admin/* public/admin",
     "build": "npm run copy && npm run sass",
     "sass": "sass ./src/style/style.scss ./public/style.css",
     "sass-watch": "sass --watch src/style:public",
