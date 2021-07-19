@@ -13,14 +13,17 @@
       }
 
       .ghost-ghost {
+        position: fixed;
+        /* display: inline-block; */
         animation: lift 1s linear infinite;
         animation-play-state: paused;
         animation-delay: calc(var(--scroll) * -1s);
+        /* some “overshoot” weirdness */
         animation-iteration-count: 1;
         animation-fill-mode: both;
       }
 
-      svg {
+      /* svg {
           position: fixed;
           top: 50%;
           left: 50%;
@@ -30,14 +33,16 @@
           animation: rotate 1s linear infinite;
           animation-play-state: paused;
           animation-delay: calc(var(--scroll) * -1s);
-          /* some “overshoot” weirdness */
+
+          some “overshoot” weirdness
+
           animation-iteration-count: 1;
           animation-fill-mode: both;
-      }
+      } */
 
       @keyframes lift {
         to {
-          transform: translateY(-170px);
+          transform: translateY(-220px);
         }
       }
 
@@ -66,7 +71,7 @@
         window.addEventListener("scroll", () => {
             var offset = (window.pageYOffset /
                 (document.body.offsetHeight - window.innerHeight));
-            offset = (offset > 0.77) ? 0.77 : offset
+            // offset = (offset > 0.77) ? 0.77 : offset
             document.body.style.setProperty('--scroll', offset);
         }, false);
     </script>
