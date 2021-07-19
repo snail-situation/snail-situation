@@ -6,6 +6,7 @@
     <title>snail situation</title>
     <link rel="stylesheet" href="/style.css">
     <!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
+
     <!-- animation -->
     <style>
       body {
@@ -14,7 +15,6 @@
 
       .ghost-ghost {
         position: fixed;
-        /* display: inline-block; */
         animation: lift 1s linear infinite;
         animation-play-state: paused;
         animation-delay: calc(var(--scroll) * -1s);
@@ -22,23 +22,6 @@
         animation-iteration-count: 1;
         animation-fill-mode: both;
       }
-
-      /* svg {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          margin-top: -50px;
-          margin-left: -50px;
-          display: inline-block;
-          animation: rotate 1s linear infinite;
-          animation-play-state: paused;
-          animation-delay: calc(var(--scroll) * -1s);
-
-          some “overshoot” weirdness
-
-          animation-iteration-count: 1;
-          animation-fill-mode: both;
-      } */
 
       @keyframes lift {
         to {
@@ -56,10 +39,6 @@
 </head>
 
 <body>
-    <!-- <svg width="100" height="100" viewBox="0 0 24 24">
-      <path d="M21,9H15V22H13V16H11V22H9V9H3V7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" />
-    </svg> -->
-
     <div class="ghost-ghost">
       <img src="/img/ghost-ghost.jpg">
     </div>
@@ -71,7 +50,6 @@
         window.addEventListener("scroll", () => {
             var offset = (window.pageYOffset /
                 (document.body.offsetHeight - window.innerHeight));
-            // offset = (offset > 0.77) ? 0.77 : offset
             document.body.style.setProperty('--scroll', offset);
         }, false);
     </script>
