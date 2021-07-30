@@ -4,20 +4,23 @@ body {
     background-color: black;
 
     > div {
-        margin: 0 auto;
+        // margin: 0 auto;
         position: fixed;
         top: 40vh;
     }
 
     .ghost-box {
         height: 50vh;
-        left: 30vw;
+        max-width: 24rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .ghost-ghost {
         height: 100vh;
-        top: 30vh;
-        left: 30vw;
+        top: 25vh;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     img {
