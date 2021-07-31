@@ -4,6 +4,7 @@ var rafScroll = require('raf-scroll');
 function scrollThing() {
     // rafScroll.init();
     rafScroll.add(reveal);
+    // rafScroll.add(update);
 }
 
 console.log('raf scroll', rafScroll)
@@ -18,6 +19,21 @@ function reveal () {
         console.log('> 600')
     }
 }
+
+
+
+// var offset = el.offsetTop;
+// var oldScr = scrolltop();
+
+// function update () {
+    // var scr = scrolltop();
+    // if (oldScr === scr) return;
+    // oldScr = scr;
+    // el.style.top = (offset - (scr * 0.3)) + 'px';
+// }
+
+
+
 
 (function setup() {
     scrollThing();
