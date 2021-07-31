@@ -4,6 +4,20 @@ A website for snail situation
 
 ----------------------------------------------------
 
+## start a development server
+
+```
+$ npm start
+```
+
+## build the website
+
+```
+$ npm run build
+```
+
+----------------------------------------------------
+
 * [Automate Contentful Deploys with Netlify Webhooks](https://www.netlify.com/blog/2020/04/24/automate-contentful-deploys-with-netlify-webhooks/)
 * [Integrate Next.js & Contentful](https://www.netlify.com/blog/2020/08/17/integrate-next.js-contentful/)
 
