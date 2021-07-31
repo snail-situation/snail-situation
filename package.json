@@ -4,11 +4,13 @@
   "description": "website",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && concurrently --kill-others \"ecstatic public\" \"npm run sass-watch\"",
+    "start": "npm run build && concurrently --kill-others \"npm run serve\" \"npm run watch-sass\"",
+    "serve": "budo src/index.js:bundle.js --dir=public/ --live --pushstate --open -- -p common-shakeify -dv",
     "copy": "mkdir -p public && cp src/index.html public && mkdir -p public/img && cp src/img/* public/img && mkdir -p public/admin && cp src/admin/* public/admin",
-    "build": "npm run copy && npm run sass",
-    "sass": "sass ./src/style/style.scss ./public/style.css",
-    "sass-watch": "sass --watch src/style:public",
+    "build": "npm run copy && npm run build-js && npm run build-sass",
+    "build-js": "browserify -p common-shakeify -t uglifyify --debug src/index.js | uglifyjs > public/bundle.js",
+    "build-sass": "sass ./src/style/style.scss ./public/style.css",
+    "watch-sass": "sass --watch src/style/style.scss public/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,8 +24,17 @@
   },
   "homepage": "https://github.com/snail-situation/snail-situation#readme",
   "devDependencies": {
+    "browserify": "^17.0.0",
+    "budo": "^11.6.4",
+    "common-shakeify": "^0.6.2",
     "concurrently": "^6.2.0",
     "ecstatic": "^4.1.4",
-    "sass": "^1.32.8"
+    "sass": "^1.32.8",
+    "uglify-js": "^3.14.1",
+    "uglifyify": "^5.0.2"
+  },
+  "dependencies": {
+    "raf-scroll": "^1.4.0",
+    "scrolltop": "^0.0.1"
   }
 }

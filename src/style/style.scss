@@ -22,7 +22,6 @@ body {
     }
 
     .ghost-ghost {
-        // height: 100vh;
         top: 36vh;
         left: 50%;
         transform: translateX(-50%);
@@ -37,5 +36,13 @@ body {
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+}
+
+.links {
+    li {
+        a {
+            color: white;
+        }
     }
 }
