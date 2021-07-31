@@ -47,7 +47,66 @@ body {
     }
 }
 
+@keyframes word-lift {
+    to {
+        transform: translate(0%, -960%);
+    }
+}
+
+@keyframes word-lift2 {
+    to {
+        transform: translate(-0%, -655%);
+    }
+}
+
+@keyframes word-lift3 {
+    to {
+        transform: translate(0%, -470%);
+    }
+}
+
 .links {
+
+    li {
+        position: relative;
+    }
+
+    li:nth-child(1) {
+        animation: word-lift 1s ease-in-out infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -1s);
+        /* some “overshoot” weirdness */
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+
+        bottom: -125vh;
+    }
+
+    li:nth-child(2) {
+        animation: word-lift2 1s ease-in-out infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -1s);
+        /* some “overshoot” weirdness */
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+
+        // bottom: -45vh;
+        bottom: -100vh;
+    }
+
+    li:nth-child(3) {
+        animation: word-lift3 1s ease-in-out infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -1s);
+        /* some “overshoot” weirdness */
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+
+        bottom: -85vh;
+    }
+
+
+
     // font-size: 11vmin;
     font-size: 2.6rem;
     position: fixed;
@@ -57,7 +116,7 @@ body {
     list-style: none;
     left: 50%;
     transform: translateX(-70%);
-    bottom: 16vh;
+    // bottom: 16vh;
     padding: 0;
 
     &.hidden {
