@@ -43,16 +43,19 @@ body {
 }
 
 .links {
-    font-size: 3rem;
+    font-size: 11vmin;
     position: fixed;
-
-    transition: visibility 0.6s;
+    opacity: 1;
+    transition: all 2s;
 
     &.hidden {
         visibility: hidden;
+        opacity: 0;
     }
 
     li {
+        margin-bottom: 4vh;
+
         a {
             transition: all 0.4s;
             font-family: $displayFont;

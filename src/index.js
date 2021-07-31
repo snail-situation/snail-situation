@@ -2,21 +2,33 @@ var scrollTop = require('scrolltop');
 var rafScroll = require('raf-scroll');
 
 function scrollThing() {
-    // rafScroll.init();
-    rafScroll.add(reveal);
+    rafScroll.add(Reveal());
+    rafScroll.add(CssVar());
     // rafScroll.add(update);
 }
 
-console.log('raf scroll', rafScroll)
+function CssVar () {
+    var oldScr = scrollTop();
+    return function setCssVar () {
+        var scr = scrollTop()
+        if (oldScr === scr) return
+        oldScr = scr;
+        var offset = (window.pageYOffset /
+            (document.body.offsetHeight - window.innerHeight));
+        document.body.style.setProperty('--scroll', offset);
+    }
+}
 
-function reveal () {
-    // var elmt = document.querySelector('.contact-info');
-    // console.log('elmt', elmt)
-    // console.log('scroll top', scrollTop())
-    if (scrollTop() > 600) {
-        var elmt = document.querySelector('.links')
-        elmt.className = elmt.className.replace(/(?:^|\s)hidden(?!\S)/g , '')
-        console.log('> 600')
+function Reveal () {
+    var oldScr = scrollTop();
+    return function reveal () {
+        var scr = scrollTop()
+        if (oldScr === scr) return
+        oldScr = scr;
+        if (scrollTop() > 600) {
+            var elmt = document.querySelector('.links')
+            elmt.className = elmt.className.replace(/(?:^|\s)hidden(?!\S)/g , '')
+        }
     }
 }
 
@@ -31,8 +43,6 @@ function reveal () {
     // oldScr = scr;
     // el.style.top = (offset - (scr * 0.3)) + 'px';
 // }
-
-
 
 
 (function setup() {
