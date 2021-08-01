@@ -50,20 +50,25 @@ body {
 @keyframes word-lift {
     to {
         // bottom: -45vh;
+        // 67vh
         transform: translate(0%, -945%);
-        // transform: translate(0%, -65vh);
+        // transform: translate(0%, -67vh);
     }
 }
 
 @keyframes word-lift2 {
     to {
-        transform: translate(-0%, -645%);
+        transform: translate(-1%, -645%);
+        // transform: translate(0%, -57.5vh);
+        // transform: translate(0%, -43.5vh);
     }
 }
 
 @keyframes word-lift3 {
     to {
-        transform: translate(0%, -470%);
+        // transform: translate(0%, -57vh);
+        // transform: translate(0%, -50vh);
+        transform: translate(-1%, -470%);
     }
 }
 
