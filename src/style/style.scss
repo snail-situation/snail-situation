@@ -7,13 +7,10 @@ body {
     background-color: black;
 
     > div {
-        // margin: 0 auto;
         position: fixed;
-        // top: 40vh;
     }
 
     .ghost-box {
-        // height: 50vh;
         bottom: 0vh;
         width: 100%;
         max-width: 20rem;
@@ -27,7 +24,6 @@ body {
     }
 
     .ghost-ghost {
-        // top: 36vh;
         bottom: -15vh;
         left: 50%;
         transform: translateX(-50%);
@@ -47,72 +43,8 @@ body {
     }
 }
 
-@keyframes word-lift {
-    to {
-        // bottom: -45vh;
-        // 67vh
-        transform: translate(0%, -945%);
-        // transform: translate(0%, -67vh);
-    }
-}
-
-@keyframes word-lift2 {
-    to {
-        transform: translate(-1%, -645%);
-        // transform: translate(0%, -57.5vh);
-        // transform: translate(0%, -43.5vh);
-    }
-}
-
-@keyframes word-lift3 {
-    to {
-        // transform: translate(0%, -57vh);
-        // transform: translate(0%, -50vh);
-        transform: translate(-1%, -470%);
-    }
-}
-
 .links {
-    // top: 58vh;
-
-    li:nth-child(1) {
-        animation: word-lift 1s ease-in-out infinite;
-        animation-play-state: paused;
-        animation-delay: calc(var(--scroll) * -1s);
-        /* some “overshoot” weirdness */
-        animation-iteration-count: 1;
-        animation-fill-mode: both;
-
-        bottom: -125vh;
-    }
-
-    li:nth-child(2) {
-        animation: word-lift2 1s ease-in-out infinite;
-        animation-play-state: paused;
-        animation-delay: calc(var(--scroll) * -1s);
-        /* some “overshoot” weirdness */
-        animation-iteration-count: 1;
-        animation-fill-mode: both;
-
-        // bottom: -45vh;
-        bottom: -100vh;
-    }
-
-    li:nth-child(3) {
-        animation: word-lift3 1s ease-in-out infinite;
-        animation-play-state: paused;
-        animation-delay: calc(var(--scroll) * -1s);
-        /* some “overshoot” weirdness */
-        animation-iteration-count: 1;
-        animation-fill-mode: both;
-
-        bottom: -85vh;
-    }
-
-
-
-    // bottom: 16vh;
-    // font-size: 11vmin;
+    top: 45vh;
     font-size: 2.6rem;
     position: fixed;
     opacity: 1;
@@ -120,7 +52,6 @@ body {
     list-style: none;
     left: 50%;
     transform: translateX(-70%);
-    // bottom: 16vh;
     padding: 0;
 
     &.hidden {

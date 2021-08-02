@@ -25,9 +25,12 @@ function Reveal () {
         var scr = scrollTop()
         if (oldScr === scr) return
         oldScr = scr;
-        if (scrollTop() > 600) {
+        if (scr > 600) {
+            console.log('!!!!')
             var elmt = document.querySelector('.links')
-            elmt.className = elmt.className.replace(/(?:^|\s)hidden(?!\S)/g , '')
+            console.log('elmt', elmt)
+            elmt.className = (elmt.className
+                .replace(/(?:^|\s)hidden(?!\S)/g , ''))
         }
     }
 }
