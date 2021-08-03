@@ -15,6 +15,12 @@ $violetGray: #95889a;
     }
 }
 
+@keyframes EvilColor {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+
 body {
     height: 200vh;
     text-align: center;
@@ -81,10 +87,13 @@ h1 {
     letter-spacing: 0.2rem;
 
     background: linear-gradient(166deg , #ffc89e, #05d0e2);
+    background-size: 600%;
     -webkit-text-fill-color: transparent;
     // text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+
+    animation: EvilColor 10s ease infinite;
 
     &.hidden {
         visibility: hidden;
