@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run build && concurrently --kill-others \"npm run serve\" \"npm run watch-sass\"",
     "serve": "budo src/index.js:bundle.js --dir=public/ --live --pushstate --open -- -p common-shakeify -dv",
-    "copy": "mkdir -p public && cp src/index.html public && mkdir -p public/img && cp src/img/* public/img && mkdir -p public/admin && cp src/admin/* public/admin",
+    "copy": "mkdir -p public && cp src/static/* public/ && cp src/index.html public && mkdir -p public/img && cp src/img/* public/img && mkdir -p public/admin && cp src/admin/* public/admin",
     "build": "npm run copy && npm run build-js && npm run build-sass",
     "build-js": "browserify -p common-shakeify -t uglifyify --debug src/index.js | uglifyjs > public/bundle.js",
     "build-sass": "sass ./src/style/style.scss ./public/style.css",

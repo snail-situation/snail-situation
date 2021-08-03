@@ -25,7 +25,7 @@ function Reveal () {
         var scr = scrollTop()
         if (oldScr === scr) return
         oldScr = scr;
-        if (scr > 600) {
+        if (scr > 500) {
             var elmts = [
                 document.querySelector('.links'),
                 document.querySelector('h1')
