@@ -133,8 +133,13 @@ h1 {
         }
     }
 }
+@media screen and (max-height: 599px) {
+    .links {
+        top: 35vh;
+    }
+}
 
-@media screen and (max-height: 600px) {
+@media screen and (min-height: 600px) and (max-height: 619px) {
     .links {
         top: 40vh;
     }
