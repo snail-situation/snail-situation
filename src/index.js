@@ -26,11 +26,14 @@ function Reveal () {
         if (oldScr === scr) return
         oldScr = scr;
         if (scr > 600) {
-            console.log('!!!!')
-            var elmt = document.querySelector('.links')
-            console.log('elmt', elmt)
-            elmt.className = (elmt.className
-                .replace(/(?:^|\s)hidden(?!\S)/g , ''))
+            var elmts = [
+                document.querySelector('.links'),
+                document.querySelector('h1')
+            ]
+            elmts.forEach(elmt => {
+                elmt.className = (elmt.className
+                    .replace(/(?:^|\s)hidden(?!\S)/g , ''))
+            })
         }
     }
 }
