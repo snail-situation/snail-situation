@@ -52,5 +52,9 @@ function Reveal () {
 
 
 (function setup() {
-    scrollThing();
-})();
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0)
+    }
+
+    scrollThing()
+})()
