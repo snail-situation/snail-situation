@@ -4,7 +4,6 @@ var rafScroll = require('raf-scroll');
 function scrollThing() {
     rafScroll.add(Reveal());
     rafScroll.add(CssVar());
-    // rafScroll.add(update);
 }
 
 function CssVar () {
@@ -37,19 +36,6 @@ function Reveal () {
         }
     }
 }
-
-
-
-// var offset = el.offsetTop;
-// var oldScr = scrolltop();
-
-// function update () {
-    // var scr = scrolltop();
-    // if (oldScr === scr) return;
-    // oldScr = scr;
-    // el.style.top = (offset - (scr * 0.3)) + 'px';
-// }
-
 
 (function setup() {
     window.onbeforeunload = function () {
