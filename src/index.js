@@ -30,8 +30,7 @@ function Reveal () {
                 document.querySelector('h1')
             ]
             elmts.forEach(elmt => {
-                elmt.className = (elmt.className
-                    .replace(/(?:^|\s)hidden(?!\S)/g , ''))
+                elmt.className = (elmt.className.replace('hidden' , ''))
             })
         }
     }
