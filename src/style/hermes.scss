@@ -4,6 +4,20 @@ body {
     margin-bottom: 8rem;
     background-color: #120518;
 
+    #content {
+        max-width: 40rem;
+        margin: 0 auto;
+        line-height: 1.8;
+        color: white;
+
+        blockquote {
+            border: 1px white;
+            border-left: 0.25em solid gray;
+            padding: 1em;
+            background-color: #292929;
+        }
+    }
+
     nav {
         width: 100%;
         border-bottom: 1px solid lightgray;
@@ -16,11 +30,8 @@ body {
 
         a {
             display: inline-block;
-            // outline: 1px solid gray;
-            // border-bottom: 2px solid gray;
 
             &:hover {
-                // border-color: white;
                 filter: brightness(2.5);
             }
         }
@@ -39,13 +50,6 @@ body {
         background-color: lightgray;
         margin: 24px 0;
         height: 0.25em;
-    }
-
-    #content {
-        max-width: 40rem;
-        margin: 0 auto;
-        line-height: 1.8;
-        color: white;
     }
 
     a {
