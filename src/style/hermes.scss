@@ -58,5 +58,9 @@ body {
         &:visited {
             color: cornflowerblue;
         }
+
+        &:hover {
+            filter: brightness(1.8);
+        }
     }
 }
