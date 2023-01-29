@@ -1,8 +1,30 @@
 body {
     font-family: sans-serif;
+    margin: 0;
     margin-bottom: 8rem;
-    // background-color: black;
     background-color: #120518;
+
+    nav {
+        width: 100%;
+        border-bottom: 1px solid lightgray;
+        padding: 6px;
+
+        img {
+            max-width: 4rem;
+            max-height: 4rem;
+        }
+
+        a {
+            display: inline-block;
+            // outline: 1px solid gray;
+            // border-bottom: 2px solid gray;
+
+            &:hover {
+                // border-color: white;
+                filter: brightness(2.5);
+            }
+        }
+    }
 
     h1, h2, h3, h4 {
         border-bottom: 1px solid lightgray;
