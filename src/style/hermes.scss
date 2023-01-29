@@ -1,9 +1,15 @@
 body {
     font-family: sans-serif;
     margin-bottom: 8rem;
+    // background-color: black;
+    background-color: #120518;
 
-    h2, h3, h4 {
+    h1, h2, h3, h4 {
         border-bottom: 1px solid lightgray;
+    }
+
+    h1 {
+        margin-bottom: 3rem;
     }
 
     hr {
@@ -16,7 +22,15 @@ body {
     #content {
         max-width: 40rem;
         margin: 0 auto;
+        line-height: 1.8;
+        color: white;
+    }
 
-        line-height: 1.5;
+    a {
+        color: lightblue;
+
+        &:visited {
+            color: cornflowerblue;
+        }
     }
 }
