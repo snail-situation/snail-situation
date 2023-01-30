@@ -21,7 +21,7 @@ fs.readFile(__dirname + '/src/hermes.md', 'utf8', (err, file) => {
     if (err) throw err
     const content = marked.parse(file)
 
-    const hermesHs = hyperstream({
+    const hs = hyperstream({
         'head': {
             _appendHtml: `<link rel="stylesheet" href="/hermes.css">`
         },
@@ -35,7 +35,6 @@ fs.readFile(__dirname + '/src/hermes.md', 'utf8', (err, file) => {
 
     // read an index.html template
     fs.createReadStream(__dirname + '/src/_index.html')
-        .pipe(hermesHs)
+        .pipe(hs)
         .pipe(ws)
 })
-    
