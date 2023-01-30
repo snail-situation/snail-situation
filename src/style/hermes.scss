@@ -1,0 +1,66 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    margin-bottom: 8rem;
+    background-color: #120518;
+
+    #content {
+        max-width: 40rem;
+        margin: 0 auto;
+        line-height: 1.8;
+        color: white;
+
+        blockquote {
+            border: 1px white;
+            border-left: 0.25em solid gray;
+            padding: 1em;
+            background-color: #292929;
+        }
+    }
+
+    nav {
+        width: 100%;
+        border-bottom: 1px solid lightgray;
+        padding: 6px;
+
+        img {
+            max-width: 4rem;
+            max-height: 4rem;
+        }
+
+        a {
+            display: inline-block;
+
+            &:hover {
+                filter: brightness(2.5);
+            }
+        }
+    }
+
+    h1, h2, h3, h4 {
+        border-bottom: 1px solid lightgray;
+    }
+
+    h1 {
+        margin-bottom: 3rem;
+    }
+
+    hr {
+        border: none;
+        background-color: lightgray;
+        margin: 24px 0;
+        height: 0.25em;
+    }
+
+    a {
+        color: lightblue;
+
+        &:visited {
+            color: cornflowerblue;
+        }
+
+        &:hover {
+            filter: brightness(1.8);
+        }
+    }
+}
