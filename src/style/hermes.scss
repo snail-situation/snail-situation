@@ -30,6 +30,7 @@ body {
 
         a {
             display: inline-block;
+            transition: filter 0.2s;
 
             &:hover {
                 filter: brightness(2.5);
@@ -48,9 +49,6 @@ body {
     #content {
         padding: 0 1rem;
     }
-    // h1,h2,p,div {
-    //     padding: 0 1rem;
-    // }
 
     hr {
         border: none;
