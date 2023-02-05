@@ -37,7 +37,8 @@ body {
         /* some “overshoot” weirdness */
         animation-iteration-count: 1;
         animation-fill-mode: both;
-        bottom: -15vh;
+        // bottom: -15vh;
+        bottom: -85px;
         left: 50%;
         transform: translateX(-50%);
         width: 20rem;
