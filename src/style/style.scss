@@ -29,7 +29,7 @@ body {
         position: fixed;
     }
 
-      .ghost-ghost {
+    .ghost-ghost {
         position: fixed;
         animation: lift 1s linear infinite;
         animation-play-state: paused;
@@ -42,22 +42,18 @@ body {
         left: 50%;
         transform: translateX(-50%);
         width: 20rem;
-        // width: 100%;
-        // max-width: 20rem;
         z-index: 1;
 
         img {
             position: relative;
             left: 1rem;
         }
-      }
+    }
 
     .ghost-box {
         z-index: 2;
         bottom: 0vh;
         width: 20rem;
-        // width: 100%;
-        // max-width: 20rem;
         left: 50%;
         transform: translateX(-50%);
 
